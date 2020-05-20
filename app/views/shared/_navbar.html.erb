@@ -1,1 +1,19 @@
-_navbar.html.erb
+<div id="master-head">
+  <div id="head-title" class="pb-3">
+    <%= link_to root_path do %>
+      <h1>Manon Mathieu</h1>
+      <h5>Rédactrice freelance  - Community Manager - Webdesigner</h5>
+    <% end %>
+  </div>
+
+  <div id="head-navbar" class="border-bottom border-top">
+    <ul class="navbar-list">
+      <li class="navbar-item"><%= link_to "Accueil", root_path %></li>
+      <li class="navbar-item">Services</li>
+      <li class="navbar-item">Projets réalisés</li>
+      <li class="navbar-item"><%= link_to "À propos", about_path %></li>
+      <li class="navbar-item">Contact</li>
+    </ul>
+  </div>
+</div>
+
