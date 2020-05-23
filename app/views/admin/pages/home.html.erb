@@ -1,0 +1,23 @@
+<div class="home-banner">
+  <div class="col-8 mx-auto h-100">
+    <div class="banner-container column">
+      <h2 class="start-title mb-4">
+        Bienvenue <strong><%= current_user.firstname if current_user%></strong><br>
+        dans votre espace administrateur.
+      </h2>
+
+      <% if current_user %>
+          <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete, class: 'btn btn-secondary' %>
+      <% else %>
+        <%= link_to 'Se connecter', new_user_session_path, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="for-more">
+
+  </div>
+</div>
+
