@@ -1,2 +1,8 @@
 fr:
   hello: "Bonjour"
+  actions:
+    back: "Retour"
+    browse: "Parcourir"
+    explore: "Sélectionner un fichier"
+    upload: "Télécharger"
+    save: "Enregistrer"

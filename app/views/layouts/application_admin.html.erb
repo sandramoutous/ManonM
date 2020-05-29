@@ -11,8 +11,10 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
-    <%= yield %>
+    <%= render 'admin/shared/navbar' %>
+    <div class="col-12">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag 'application' %>
 
     <%= javascript_pack_tag 'application' %>

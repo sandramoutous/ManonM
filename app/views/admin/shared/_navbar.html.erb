@@ -1,7 +1,7 @@
 <div id="master-head">
   <div id="head-title" class="pb-3">
 
-    <%= link_to root_path do %>
+    <%= link_to admin_root_path do %>
       <h1>Manon Mathieu</h1>
       <h5>Rédactrice freelance  - Community Manager - Webdesigner</h5>
     <% end %>
@@ -9,11 +9,12 @@
 
   <div id="head-navbar" class="border-bottom border-top">
     <ul class="navbar-list">
-      <li class="navbar-item"><%= link_to "Accueil", root_path %></li>
-      <li class="navbar-item"><%= link_to "Services", services_path %></li>
+      <li class="navbar-item"><%= link_to "Accueil", admin_root_path %></li>
+      <li class="navbar-item"><%= link_to "Services", admin_services_path %></li>
       <li class="navbar-item">Projets réalisés</li>
       <li class="navbar-item"><%= link_to "À propos", about_path %></li>
       <li class="navbar-item">Contact</li>
+      <li class="navbar-item"><%= link_to "Retour au site client", root_path %></li>
     </ul>
   </div>
 </div>
