@@ -20,3 +20,6 @@ user1 = User.new(
   admin: true
 )
 user1.save!
+
+Category.create(name: 'Site web')
+Category.create(name: 'Communication')

@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
-
   get 'about', to: 'pages#about'
+  resources :services
 
   namespace :admin do
     root to: 'pages#home'
-
     resources :users
+    resources :services
   end
 end

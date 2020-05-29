@@ -1,0 +1,10 @@
+
+<% @services.each do |service| %>
+  <div class="card-product my-4">
+    <%= image_tag(service.image.url, alt: 'Image') if service.image? %>
+    <div class="card-product-infos">
+      <h2><%= service.title %></h2>
+      <h4><%= service.description %></h4>
+    </div>
+  </div>
+<% end %>

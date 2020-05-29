@@ -1,0 +1,60 @@
+<%= form_for @service do |f| %>
+
+  <small id="serviceHelp" class="form-text text-muted my-2">
+    Veillez à bien remplir les champs obligatoires pour valider l'enregistrement de votre novueau service.
+  </small>
+
+  <%= f.hidden_field :user_id %>
+
+  <div class="form-group">
+    <span class="text-danger">*</span>
+    <%= f.label :category_id, "Catégorie", class: "control-label" %>
+    <%= f.select :category_id, options_for_select(Category.all.collect { |c| [ c.name, c.id ] }, @service.category), { include_blank: true }, { class: 'form-control custom-select' } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :title, "Titre", class: "control-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+    <small id="serviceHelp" class="form-text text-muted">Facultatif</small>
+  </div>
+
+  <div class="form-group">
+    <span class="text-danger">*</span>
+    <%= f.label :description, "Description", class: "control-label" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <span class="text-danger">*</span>
+    <%= f.label :image, "Image", class: "control-label" %>
+      <div class="custom-file custom-file-preview">
+        <%= f.file_field :image, class: 'custom-file-input', accept: "image/png, image/jpeg", required: true %>
+        <label class="custom-file-label" for="file" data-browse="<%= t('actions.browse') %>"><%= t('actions.explore') %></label>
+        <div class="image-preview">
+          <%= image_tag @service.image.url.nil? ? 'default-image.png' : @service.image, class: 'img-fluid' %>
+        </div>
+      </div>
+  </div>
+
+  </div>
+
+  <div class="form-group">
+    <div class="text-center">
+      <%= link_to t('actions.back'), :back, class: 'btn btn-secondary' %>
+      <button type="submit" class="btn btn-primary"><%= t('actions.save') %></button>
+    </div>
+  </div>
+
+<% end %>
+
+<script type="text/javascript">
+  let input = document.querySelector(".custom-file-input");
+  input.addEventListener("change", function() {
+    const file = this.files[0];
+    const source = URL.createObjectURL(file);
+    const img = this.parentNode.querySelector('img');
+    if (img !== null) {
+        img.src = source;
+    }
+  })
+</script>
