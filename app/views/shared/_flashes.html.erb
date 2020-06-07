@@ -19,7 +19,9 @@
 
 <script type="text/javascript">
   let close = document.querySelector(".alert-close-fa");
-  close.addEventListener("click", function() {
-    document.querySelector(".alert").classList.add("d-none");
-  })
+  if (close !== null) {
+    close.addEventListener("click", function() {
+      document.querySelector(".alert").classList.add("d-none");
+    })
+  }
 </script>

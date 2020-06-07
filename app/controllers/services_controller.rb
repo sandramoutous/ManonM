@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: %i[edit update]
+  before_action :set_service, only: %i[show edit update destroy]
 
   def index
     @services = Service.all
@@ -27,6 +27,10 @@ class ServicesController < ApplicationController
     else
       redirect_to new_admin_service_path, alert: t('services.not_updated')
     end
+  end
+
+  def destroy
+    redirect_to admin_services_path, notice: t('services.destroyed') if @service.destroy
   end
 
   private
