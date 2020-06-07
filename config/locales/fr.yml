@@ -6,3 +6,11 @@ fr:
     explore: "Sélectionner un fichier"
     upload: "Télécharger"
     save: "Enregistrer"
+    update: "Modifier"
+    close: "Fermer"
+    delete: "Supprimer"
+    sure?: "Etes-vous sûr(e) ?"
+  services:
+    updated: "Le service a été modifié avec succès"
+    not_updated: "Le service n'a pas pu être modifié"
+    destroyed: "Le service a été supprimé avec succès"

@@ -9,7 +9,7 @@
   <div class="form-group">
     <span class="text-danger">*</span>
     <%= f.label :category_id, "Catégorie", class: "control-label" %>
-    <%= f.select :category_id, options_for_select(Category.all.collect { |c| [ c.name, c.id ] }, @service.category), { include_blank: true }, { class: 'form-control custom-select' } %>
+    <%= f.select :category_id, options_for_select(Category.all.collect { |c| [ c.name, c.id ] }, @service.category), { include_blank: false }, { class: 'form-control custom-select' } %>
   </div>
 
   <div class="form-group">
@@ -28,10 +28,10 @@
     <span class="text-danger">*</span>
     <%= f.label :image, "Image", class: "control-label" %>
       <div class="custom-file custom-file-preview">
-        <%= f.file_field :image, class: 'custom-file-input', accept: "image/png, image/jpeg", required: true %>
+        <%= f.file_field :image, class: 'custom-file-input', accept: "image/png, image/jpeg", value: @service.image %>
         <label class="custom-file-label" for="file" data-browse="<%= t('actions.browse') %>"><%= t('actions.explore') %></label>
         <div class="image-preview">
-          <%= image_tag @service.image.url.nil? ? 'default-image.png' : @service.image, class: 'img-fluid' %>
+          <%= image_tag @service.image.url.nil? ? 'default-image.png' : @service.image.url, class: 'img-fluid' %>
         </div>
       </div>
   </div>

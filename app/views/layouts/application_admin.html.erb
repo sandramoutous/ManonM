@@ -13,6 +13,7 @@
   <body>
     <%= render 'admin/shared/navbar' %>
     <div class="col-12">
+      <%= render 'shared/flashes' %>
       <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
