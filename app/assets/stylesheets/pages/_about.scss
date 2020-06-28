@@ -1,0 +1,18 @@
+.about-image {
+  position: relative;
+  box-shadow: 25px 25px 0px rgba(180, 76, 12, 0.49);
+  min-width: 230px;
+  height: 380px;
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+.about-description {
+  margin-left: 2em;
+}
+@media (min-width: 392px) {
+  .about-description {
+    margin-left: 6em
+  }
+}
