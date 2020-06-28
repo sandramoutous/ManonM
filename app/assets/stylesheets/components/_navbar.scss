@@ -17,16 +17,14 @@
 }
 .navbar-item {
   list-style: none;
-  padding: 1em 2em;
+  padding: 1em;
   display: inline-block;
-  a {
-    color: #606060;
-    &:hover {
-      color: black;
-      text-decoration: none;
-    }
-    &:active {
-      color: #3C91E6;
-    }
+}
+.navbar-link {
+  padding: 1em 2em;
+  color: #606060;
+  &:hover {
+    text-decoration: none;
+    color: #007BFF;
   }
 }
