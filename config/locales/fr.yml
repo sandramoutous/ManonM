@@ -10,7 +10,17 @@ fr:
     close: "Fermer"
     delete: "Supprimer"
     sure?: "Etes-vous sûr(e) ?"
+    back_to_guest: "Retour au site client"
+  pages:
+    home: "Accueil"
+    about: "À propos"
+    contact: "Contact"
+    services: "Services"
+    profile: "Mon profil"
   services:
     updated: "Le service a été modifié avec succès"
     not_updated: "Le service n'a pas pu être modifié"
     destroyed: "Le service a été supprimé avec succès"
+  users:
+    updated: "Votre profil a été modifié avec succès"
+    not_updated: "Votre profil n'a pas pu être modifié"

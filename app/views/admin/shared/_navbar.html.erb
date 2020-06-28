@@ -9,13 +9,36 @@
 
   <div id="head-navbar" class="border-bottom border-top">
     <ul class="navbar-list">
-      <li class="navbar-item"><%= link_to "Accueil", admin_root_path %></li>
-      <li class="navbar-item"><%= link_to "Services", admin_services_path %></li>
+      <%= link_to admin_root_path, class: "navbar-link" do %>
+        <li class="navbar-item"><%= t('pages.home') %></li>
+      <% end %>
+      <%= link_to admin_services_path, class: "navbar-link" do %>
+        <li class="navbar-item"><%= t('pages.services') %></li>
+      <% end %>
       <!-- <li class="navbar-item">Projets réalisés</li> -->
-      <li class="navbar-item"><%= link_to "À propos", about_path %></li>
-      <li class="navbar-item"><%= link_to "Contact", contact_path %></li>
-      <li class="navbar-item"><%= link_to "Retour au site client", root_path %></li>
+      <%= link_to about_path, class: "navbar-link" do %>
+        <li class="navbar-item"><%= t('pages.about') %></li>
+      <% end %>
+      <%= link_to contact_path, class: "navbar-link" do %>
+        <li class="navbar-item"><%= t('pages.contact') %></li>
+      <% end %>
+      <%= link_to admin_user_path(current_user), class: "navbar-link" do %>
+        <li class="navbar-item"><%= t('pages.profile') %></li>
+      <% end %>
+      <%= link_to root_path, class: "navbar-link" do %>
+        <li class="navbar-item"><%= t('actions.back_to_guest') %></li>
+      <% end %>
     </ul>
   </div>
 </div>
+
+<script type="text/javascript">
+  const navLinks = document.querySelectorAll(".navbar-link");
+
+  navLinks.forEach(function(link){
+    if (link.pathname === window.location.pathname) {
+      link.classList.add("text-body")
+    }
+  });
+</script>
 

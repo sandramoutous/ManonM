@@ -1,7 +1,8 @@
 .home-banner {
   background-image: url("https://images.pexels.com/photos/3740472/pexels-photo-3740472.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
   background-size: cover;
-  height: calc(100vh - 240px);
+  height: calc(100vh - 195px);
+  background-position: 10% 55%;
 }
 .banner-container {
   text-align: center;
@@ -12,17 +13,29 @@
   align-items: center;
 }
 .start-title {
-  padding-top: 5.5em;
+  padding-top: 2.5em;
   color: white;
 }
 .start-text {
-  padding-bottom: 3em;
-  padding-top: 2em;
   color: white;
+  padding: 1em 0;
 }
 .start-btn {
   font-size: 1.5em;
   border-radius: 4px;
   background-color: #3C91E6;
   padding: 0.3em 1em;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 510px) {
+  h2 {
+    font-size: 1.6em;
+  }
+  h5 {
+    font-size: 1.1em;
+  }
+  .start-btn {
+    font-size: 1.2em;
+  }
 }
