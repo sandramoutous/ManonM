@@ -14,9 +14,12 @@
 
 @import "services";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: white;
 }
 .high-margin-top {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
