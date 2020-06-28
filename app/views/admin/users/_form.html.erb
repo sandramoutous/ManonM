@@ -23,7 +23,7 @@
     <span class="text-danger">*</span>
     <%= f.label :image, "Image", class: "control-label" %>
     <div class="custom-file custom-file-preview">
-      <%= f.file_field :image, class: 'custom-file-input', accept: "image/png, image/jpeg", value: @user.image %>
+      <%= f.file_field :image, class: 'custom-file-input', accept: "image/png, image/jpeg", value: @user.image if @user.image %>
       <label class="custom-file-label" for="file" data-browse="<%= t('actions.browse') %>"><%= t('actions.explore') %></label>
       <div class="image-preview">
         <%= image_tag @user.image.nil? ? 'default-image.png' : @user.image.url, class: 'img-fluid' %>
