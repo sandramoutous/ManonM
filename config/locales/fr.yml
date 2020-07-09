@@ -30,3 +30,6 @@ fr:
   users:
     updated: "Votre profil a été modifié avec succès"
     not_updated: "Votre profil n'a pas pu être modifié"
+  footer:
+    admin_space: "Espace administrateur"
+
