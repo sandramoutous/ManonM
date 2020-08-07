@@ -9,7 +9,8 @@
 
     <div class="d-flex high-margin-top">
       <div class="about-image">
-        <%= image_tag(@principal_user.image.url, alt: 'Image', class: "img-fluid") if @principal_user.image? %>
+        <%#= image_tag(@principal_user.image.url, alt: 'Image', class: "img-fluid") if @principal_user.image? %>
+        <%= cl_image_tag('https://res.cloudinary.com/dsxhzsgsy/image/upload/v1595584889/Manon-dos_yjqjjk.png', alt: 'Image', class: "img-fluid") %>
       </div>
 
       <div class="about-description bg-white p-4">

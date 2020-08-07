@@ -1,25 +1,59 @@
+<%# @services.each do |service| %>
+  <!-- <div class="card-product my-4"> -->
+    <%#= cl_image_tag(service.image.url, alt: 'Image') if service.image? %>
+    <!-- <div class="card-product-infos"> -->
+      <!-- <h2><%#= service.title %></h2> -->
+      <!-- <h4><%#= service.description %></h4> -->
+    <!-- </div> -->
+    <!-- <div class="actions-card"> -->
+      <%# if current_user && current_user.admin %>
+        <%#= link_to edit_admin_service_path(service) do %>
+          <!-- <i class="far fa-edit" title="<%#= t('actions.update') %>"></i> -->
+        <%# end %>
+        <%#= button_to service_path(service), method: :delete, class: " text-danger btn btn-outline-light btn-sm" do %>
+          <!-- <i class="far fa-trash-alt" title="<%#= t('actions.delete') %>"></i> -->
+        <%# end %>
+      <%# end %>
+    <!-- </div> -->
+  <!-- </div> -->
+<%# end %>
 
-<% @services.each do |service| %>
-
-  <div class="card-product my-4">
-    <%= image_tag(service.image.url, alt: 'Image') if service.image? %>
-    <div class="card-product-infos">
-      <h2><%= service.title %></h2>
-      <h4><%= service.description %></h4>
-    </div>
-    <div class="actions-card">
-      <% if current_user && current_user.admin %>
-
-        <%= link_to edit_admin_service_path(service) do %>
-          <i class="far fa-edit" title="<%= t('actions.update') %>"></i>
-        <% end %>
-
-        <%= button_to service_path(service), method: :delete, class: " text-danger btn btn-outline-light btn-sm" do %>
-          <i class="far fa-trash-alt" title="<%= t('actions.delete') %>"></i>
-        <% end %>
-
-      <% end %>
-    </div>
+<div class="card-product my-4">
+  <%= cl_image_tag('https://res.cloudinary.com/dsxhzsgsy/image/upload/v1596819554/site-web-Guide_utilisation_hdcriu.jpg', alt: 'Image', class: "img-fluid") %>
+  <div class="card-product-infos">
+    <h2>Site Web + Guide d'utilisation</h2>
+    <h4>Votre site clef en main avec un guide d'utilisation pour le maîtriser au quotidien.</h4>
   </div>
+</div>
 
-<% end %>
+<div class="card-product my-4">
+  <%= cl_image_tag('https://res.cloudinary.com/dsxhzsgsy/image/upload/v1596819890/site-web-mises-a-jour_jg51at.jpg', alt: 'Image', class: "img-fluid") %>
+  <div class="card-product-infos">
+    <h2>Site web + Mises à jours</h2>
+    <h4>Votre site web clef en main ainsi que des mises à jour régulière pendant une durée déterminée.</h4>
+  </div>
+</div>
+
+<div class="card-product my-4">
+  <%= cl_image_tag('https://res.cloudinary.com/dsxhzsgsy/image/upload/v1596819837/site-web-MAJ-CM_wbvesi.jpg', alt: 'Image', class: "img-fluid") %>
+  <div class="card-product-infos">
+    <h2>Site Web + mises à jour + Réseaux sociaux</h2>
+    <h4>Création de votre site web et gestion de vos actualités en ligne comme sur les réseaux sociaux.</h4>
+  </div>
+</div>
+
+<div class="card-product my-4">
+  <%= cl_image_tag('https://res.cloudinary.com/dsxhzsgsy/image/upload/v1596799316/relation-presse-dossier-presse_oqhbbn.jpg', alt: 'Image', class: "img-fluid") %>
+  <div class="card-product-infos">
+    <h2>Dossier de presse et communication ponctuelle</h2>
+    <h4>Conception de vos communiqués et dossiers de presse, création des documents de communication dédiés à un événement ponctuel.</h4>
+  </div>
+</div>
+
+<div class="card-product my-4">
+  <%= cl_image_tag('https://res.cloudinary.com/dsxhzsgsy/image/upload/v1596819919/docs-de-com_qlqfvc.jpg', alt: 'Image', class: "img-fluid") %>
+  <div class="card-product-infos">
+    <h2>Vos documents de communications</h2>
+    <h4>Création de tous types de documents de communication personnalisés : flyer, brochure, catalogue...</h4>
+  </div>
+</div>
