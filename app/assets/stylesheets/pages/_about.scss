@@ -1,7 +1,9 @@
+
 .about-image {
   position: relative;
   box-shadow: 25px 25px 0px rgba(180, 76, 12, 0.49);
   min-width: 230px;
+  max-width: 230px;
   height: 380px;
   img {
     object-fit: cover;
@@ -11,8 +13,22 @@
 .about-description {
   margin-left: 2em;
 }
-@media (min-width: 392px) {
+@media (min-width: 500px) {
   .about-description {
     margin-left: 6em
   }
 }
+
+@media (max-width: 500px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about-description {
+    margin-left: 0;
+    margin-top: 3em;
+  }
+  .about-image {
+    margin-left: 1.5em;
+  }
+}
+
