@@ -23,3 +23,11 @@ body {
 .high-margin-top {
   margin-top: 10vh;
 }
+.btn-primary {
+  background-color: #d7525e;
+  border-style: none;
+  &:hover {
+    background-color: #EC3343;
+    opacity: 0.9;
+  }
+}

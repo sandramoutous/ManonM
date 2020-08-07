@@ -24,17 +24,23 @@
 
     <div class="home-service-cards d-flex">
       <div class="home-service-card">
-        <i class="fas fa-pen-nib home-service-icon"></i>
+        <%= link_to services_path, class: "text-dark" do %>
+          <i class="fas fa-pen-nib home-service-icon"></i>
+        <% end %>
         <h5 class="text-uppercase"><%= t('home.redaction') %></h5>
         <p class="text-justify">Pour une rédaction sur mesure, choisissez ce service. Qu’importe le niveau de complexité de vos textes et le sujet à aborder, je serais en mesure de vous offrir des contenus de  qualité, adapté à votre projet, votre personalité.</p>
       </div>
       <div class="home-service-card">
-        <i class="fas fa-pencil-ruler home-service-icon"></i>
+        <%= link_to services_path, class: "text-dark" do %>
+          <i class="fas fa-pencil-ruler home-service-icon"></i>
+        <% end %>
         <h5 class="text-uppercase"><%= t('home.creation') %></h5>
         <p class="text-justify">Développez votre communication en bénéficiant des meilleurs outils actuels, adaptés à votre identité. Flyers, brochures, catalogues mais aussi sites web et réseaux sociaux, vous ne passerez plus inéperçu !</p>
       </div>
       <div class="home-service-card">
-        <i class="far fa-lightbulb home-service-icon"></i>
+        <%= link_to services_path, class: "text-dark" do %>
+          <i class="far fa-lightbulb home-service-icon"></i>
+        <% end %>
         <h5 class="text-uppercase"><%= t('home.communication') %></h5>
         <p class="text-justify">Avec les communiqués et dossiers de presse, réalisés sur mesure, je vous aide à valoriser votre identité, votre projet, votre création  auprès des médias, de la presse et des acteurs de votre secteur.</p>
       </div>
